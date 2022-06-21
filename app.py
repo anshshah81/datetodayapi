@@ -1,4 +1,5 @@
 from flask import *
+from flask_cors import CORS
 from colorama import Fore
 
 centuryDates = [2, 0, 5, 3]
@@ -7,6 +8,7 @@ thirtyDayMonths = [4, 6, 9, 11]
 days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
 
 app = Flask(__name__)
+CORS(app)
 
 @app.route('/', methods=['GET'])
 
